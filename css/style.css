@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: Poppins, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff8ee;
+}
+
+/* ===== LOGIN ===== */
+.login-page {
+  height: 100vh;
+  background: linear-gradient(#4e342e, #6d4c41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px;
+  width: 360px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.login-box h1 {
+  color: #4e342e;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #fbc02d;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== ADMIN LAYOUT ===== */
+.admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #4e342e;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 12px 0;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.topbar {
+  background: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.box {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+button.primary {
+  background: #fbc02d;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== CUSTOMER ===== */
+.customer {
+  padding: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product button {
+  background: #4caf50;
+  border: none;
+  padding: 8px;
+  color: #fff;
+}
