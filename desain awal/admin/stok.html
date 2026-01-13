@@ -1,13 +1,231 @@
-<link rel="stylesheet" href="../css/style.css">
-<div class="admin">
-  <div class="sidebar">MENU</div>
-  <div class="main">
-    <div class="topbar">Manajemen Stok</div>
-    <div class="box">
-      <table>
-        <tr><th>Produk</th><th>Stok</th><th>Aksi</th></tr>
-        <tr><td>Brownies Coklat</td><td>12</td><td>Tambah | Kurang</td></tr>
-      </table>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Manajemen Stok | Brownies Kukus</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#f6f1eb,#efe4da);
+}
+
+/* ===== TOPBAR ===== */
+.topbar{
+    height:60px;
+    background:#efe4da;
+    color:#5a3621;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    border-bottom:1px solid #d6c7bb;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.topbar .left img{
+    width:165px;
+}
+
+.topbar .right{
+    display:flex;
+    align-items:center;
+}
+
+.topbar .icon{
+    font-size:18px;
+    margin-left:14px;
+    color:#c6862d;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topbar .icon:hover{
+    color:#a86b1f;
+}
+
+.topbar .logout{
+    margin-left:18px;
+    color:#c6862d;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.topbar .logout:hover{
+    color:#a86b1f;
+}
+
+/* ===== LAYOUT ===== */
+.admin{
+    display:flex;
+    min-height:calc(100vh - 60px);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:220px;
+    background:linear-gradient(180deg,#6b3f28,#5a3322);
+    padding-top:15px;
+}
+
+.sidebar a{
+    display:block;
+    padding:13px 22px;
+    margin:4px 12px;
+    border-radius:8px;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.sidebar a.active{
+    background:#f4b41a;
+    color:#4b2c20;
+    font-weight:600;
+}
+
+.sidebar a:hover{
+    background:#8b5a3c;
+}
+
+/* ===== MAIN ===== */
+.main{
+    flex:1;
+    padding:25px;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title{
+    font-size:20px;
+    font-weight:600;
+    color:#5a3621;
+    margin-bottom:20px;
+}
+
+/* ===== BOX ===== */
+.box{
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 6px 14px rgba(0,0,0,.12);
+}
+
+/* ===== TABLE ===== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+th{
+    background:#6b3f28;
+    color:#fff;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    color:#5a3621;
+}
+
+tr:hover{
+    background:#f6f1eb;
+}
+
+/* ===== BUTTON AKSI ===== */
+.action a{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    margin-right:6px;
+    transition:.3s;
+}
+
+.add{
+    background:#d4edda;
+    color:#155724;
+}
+
+.add:hover{
+    background:#c3e6cb;
+}
+
+.reduce{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.reduce:hover{
+    background:#f5c6cb;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="left">
+        <img src="image/logo.png">
     </div>
-  </div>
+    <div class="right">
+        <span class="icon">🔔</span>
+        <span class="icon">👤</span>
+        <a href="../auth/login.html" class="logout">Logout</a>
+    </div>
 </div>
+
+<div class="admin">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+    <a href="dashboard.html">Dashboard</a>
+    <a class="pengguna.html">Pengguna</a>
+    <a href="produk.html">Produk</a>
+    <a href="kategori.html">Kategori</a>
+    <a href="stok.html" class="active">Stok</a>
+    <a href="transaksi.html">Transaksi</a>
+    <a href="laporan.html">Laporan</a>
+</div>
+
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="page-title">Manajemen Stok</div>
+
+        <div class="box">
+            <table>
+                <tr>
+                    <th>Produk</th>
+                    <th>Stok</th>
+                    <th>Aksi</th>
+                </tr>
+                <tr>
+                    <td>Brownies Coklat</td>
+                    <td>12</td>
+                    <td class="action">
+                        <a href="#" class="add">Tambah</a>
+                        <a href="#" class="reduce">Kurang</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

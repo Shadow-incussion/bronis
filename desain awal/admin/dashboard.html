@@ -1,27 +1,210 @@
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | Brownies Kukus</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#f6f1eb,#efe4da);
+}
+
+/* ===== TOPBAR ===== */
+.topbar{
+    height:60px;
+    background:#efe4da;
+    color:#5a3621;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    border-bottom:1px solid #d6c7bb;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.topbar .left{
+    display:flex;
+    align-items:center;
+}
+
+.topbar img{
+    width:165px;
+}
+
+.topbar .right{
+    display:flex;
+    align-items:center;
+}
+
+.topbar .icon{
+    font-size:18px;
+    margin-left:14px;
+    color:#c6862d;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topbar .icon:hover{
+    color:#a86b1f;
+}
+
+.topbar .logout{
+    margin-left:18px;
+    color:#c6862d;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.topbar .logout:hover{
+    color:#a86b1f;
+}
+
+/* ===== LAYOUT ===== */
+.admin{
+    display:flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:220px;
+    background:linear-gradient(180deg,#6b3f28,#5a3322);
+    min-height:calc(100vh - 60px);
+    padding-top:15px;
+}
+
+.sidebar a{
+    display:block;
+    padding:13px 22px;
+    margin:4px 12px;
+    border-radius:8px;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.sidebar a.active{
+    background:#f4b41a;
+    color:#4b2c20;
+    font-weight:600;
+}
+
+.sidebar a:hover{
+    background:#8b5a3c;
+}
+
+/* ===== MAIN ===== */
+.main{
+    flex:1;
+    padding:25px;
+}
+
+.main h2{
+    font-size:20px;
+    margin-bottom:18px;
+    color:#5a3621;
+}
+
+/* ===== CARD ===== */
+.card-box{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    background:#fff;
+    padding:18px;
+    border-radius:12px;
+    font-size:14px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    border-left:5px solid #f4b41a;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.card b{
+    font-size:22px;
+    margin-top:6px;
+    display:block;
+    color:#5a3621;
+}
+
+/* ===== GRAFIK ===== */
+.box{
+    margin-top:25px;
+    background:#fff;
+    height:280px;
+    border-radius:12px;
+    box-shadow:0 6px 14px rgba(0,0,0,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#999;
+    font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="left">
+        <img src="image/logo.png">
+    </div>
+    <div class="right">
+        <span class="icon">🔔</span>
+        <span class="icon">👤</span>
+        <a href="../auth/login.html" class="logout">Logout</a>
+    </div>
+</div>
+
+<!-- CONTENT -->
 <div class="admin">
-  <div class="sidebar">
-    <h2>Admin</h2>
-    <a href="dashboard.html">Dashboard</a>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+    <a href="dashboard.html" class="active">Dashboard</a>
     <a href="pengguna.html">Pengguna</a>
-    <a href="kategori.html">Kategori</a>
     <a href="produk.html">Produk</a>
+    <a href="kategori.html">Kategori</a>
     <a href="stok.html">Stok</a>
     <a href="transaksi.html">Transaksi</a>
     <a href="laporan.html">Laporan</a>
-    <a href="../auth/login.html">Logout</a>
-  </div>
+</div>
 
-  <div class="main">
-    <div class="topbar">Dashboard</div>
 
-    <div class="card-box">
-      <div class="card">Total Produk<br><b>12</b></div>
-      <div class="card">Total Pesanan<br><b>8</b></div>
-      <div class="card">Stok Menipis<br><b>3</b></div>
-      <div class="card">Total Penjualan<br><b>Rp1.250.000</b></div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h2>Dashboard</h2>
+
+        <div class="card-box">
+            <div class="card">Total Produk<b>12</b></div>
+            <div class="card">Stok Menipis<b>3</b></div>
+            <div class="card">Pesanan Hari Ini<b>8</b></div>
+            <div class="card">Total Penjualan<b>Rp1.250.000</b></div>
+        </div>
+
+        <div class="box">
+            Grafik Penjualan
+        </div>
     </div>
 
-    <div class="box">Grafik Penjualan (Backend)</div>
-  </div>
 </div>
+
+</body>
+</html>
