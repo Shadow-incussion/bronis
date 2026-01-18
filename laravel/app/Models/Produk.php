@@ -9,7 +9,7 @@ class Produk extends Model
     protected $table = 'produk';
 
     protected $fillable = [
-        'nama_produk',
+        'nama',
         'id_kategori',
         'harga',
         'stok',
@@ -26,9 +26,9 @@ class Produk extends Model
     // Relasi ke stok
     public function stok()
     {
-        return $this->hasMany(Stok::class);
+        return $this->hasOne(Stok::class, 'produk_id');
     }
-
+    
     // Relasi ke detail transaksi
     public function detailTransaksi()
     {

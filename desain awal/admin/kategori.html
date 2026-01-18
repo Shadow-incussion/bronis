@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Manajemen Kategori | Brownies Kukus</title>
+<title>Home | Brownies Kukus</title>
 
 <style>
 *{
@@ -12,220 +12,211 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:linear-gradient(180deg,#f6f1eb,#efe4da);
-}
-
-/* ===== TOPBAR ===== */
-.topbar{
-    height:60px;
-    background:#efe4da;
-    color:#5a3621;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 20px;
-    border-bottom:1px solid #d6c7bb;
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
-}
-
-.topbar .left img{
-    width:165px;
-}
-
-.topbar .right{
-    display:flex;
-    align-items:center;
-}
-
-.topbar .icon{
-    font-size:18px;
-    margin-left:14px;
-    color:#c6862d;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.topbar .icon:hover{
-    color:#a86b1f;
-}
-
-.topbar .logout{
-    margin-left:18px;
-    color:#c6862d;
-    font-weight:600;
-    text-decoration:none;
-}
-
-.topbar .logout:hover{
-    color:#a86b1f;
-}
-
-/* ===== LAYOUT ===== */
-.admin{
-    display:flex;
-    min-height:calc(100vh - 60px);
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar{
-    width:220px;
-    background:linear-gradient(180deg,#6b3f28,#5a3322);
-    padding-top:15px;
-}
-
-.sidebar a{
-    display:block;
-    padding:13px 22px;
-    margin:4px 12px;
-    border-radius:8px;
+    background:linear-gradient(135deg,#4b2c20,#7a4a32);
     color:#fff;
+}
+
+/* ===== TOP NAV ===== */
+.top-nav{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    padding:15px 30px;
+    display:flex;
+    justify-content:flex-end;
+    gap:25px;
+    z-index:100;
+}
+
+.top-nav a{
+    color:#ffd27d;
     text-decoration:none;
+    font-weight:500;
     font-size:14px;
-    transition:.3s;
 }
 
-.sidebar a.active{
-    background:#f4b41a;
-    color:#4b2c20;
-    font-weight:600;
+.top-nav a:hover{
+    text-decoration:underline;
 }
 
-.sidebar a:hover{
-    background:#8b5a3c;
+/* ===== SECTION ===== */
+section{
+    min-height:100vh;
+    padding:120px 80px;
+    display:flex;
+    align-items:center;
 }
 
-/* ===== MAIN ===== */
-.main{
-    flex:1;
-    padding:25px;
+/* ===== SECTION 1 ===== */
+.hero{
+    justify-content:space-between;
 }
 
-/* ===== PAGE TITLE ===== */
-.page-title{
-    font-size:20px;
-    font-weight:600;
-    color:#5a3621;
-    margin-bottom:20px;
+.hero-text{
+    max-width:500px;
 }
 
-/* ===== BOX ===== */
-.box{
-    background:#fff;
-    padding:20px;
-    border-radius:14px;
-    box-shadow:0 6px 14px rgba(0,0,0,.12);
-}
-
-/* ===== BUTTON ===== */
-.primary{
-    background:#f4b41a;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    font-weight:600;
-    color:#4b2c20;
-    cursor:pointer;
+.hero-text h1{
+    font-size:42px;
     margin-bottom:15px;
 }
 
-.primary:hover{
-    background:#e6a900;
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+    opacity:.9;
+    margin-bottom:30px;
 }
 
-/* ===== TABLE ===== */
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:10px;
-    font-size:14px;
-}
-
-th{
-    background:#6b3f28;
-    color:#fff;
-    padding:12px;
-    text-align:left;
-}
-
-td{
-    padding:12px;
-    border-bottom:1px solid #eee;
-    color:#5a3621;
-}
-
-tr:hover{
-    background:#f6f1eb;
-}
-
-/* ===== AKSI ===== */
-.action a{
-    text-decoration:none;
+.hero-text .btn{
+    display:inline-block;
+    background:#f4b41a;
+    color:#4b2c20;
+    padding:12px 30px;
+    border-radius:8px;
     font-weight:600;
-    margin-right:10px;
-    color:#c6862d;
+    text-decoration:none;
 }
 
-.action a:hover{
-    color:#a86b1f;
+.hero img{
+    width:380px;
+}
+
+/* ===== SECTION 2 ===== */
+.produk{
+    flex-direction:column;
+}
+
+.produk h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.produk-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    padding:20px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.card span{
+    color:#ffd27d;
+    font-weight:600;
+}
+
+/* ===== SECTION 3 ===== */
+.contact{
+    flex-direction:column;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:30px;
+    opacity:.9;
+}
+
+.contact-icons{
+    display:flex;
+    gap:30px;
+}
+
+.contact-icons a{
+    color:#ffd27d;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-    <div class="left">
-        <img src="image/logo.png">
-    </div>
-    <div class="right">
-        <span class="icon">🔔</span>
-        <span class="icon">👤</span>
-        <a href="../auth/login.html" class="logout">Logout</a>
-    </div>
+<!-- TOP ICON -->
+<div class="top-nav">
+    <a href="auth/login.html">Login</a>
+    <a href="#produk">Info</a>
+    <a href="#contact">Contact</a>
 </div>
 
-<div class="admin">
+<!-- SECTION 1 -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Brownies Kukus</h1>
+        <p>
+            Brownies kukus lembut dengan rasa coklat premium,
+            dibuat dari bahan berkualitas dan tanpa pengawet.
+            Cocok untuk semua momen spesial Anda.
+        </p>
+        <a href="auth/login.html" class="btn">Login Sistem</a>
+    </div>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="pengguna.html">Pengguna</a>
-    <a href="produk.html">Produk</a>
-    <a href="kategori.html" class="active">Kategori</a>
-    <a href="stok.html">Stok</a>
-    <a href="transaksi.html">Transaksi</a>
-    <a href="laporan.html">Laporan</a>
-</div>
+    <img src="image/logo.png" alt="Brownies">
+</section>
 
+<!-- SECTION 2 -->
+<section class="produk" id="produk">
+    <h2>Produk Kami</h2>
 
-
-    <!-- MAIN -->
-    <div class="main">
-
-        <div class="page-title">Manajemen Kategori</div>
-
-        <div class="box">
-            <button class="primary">Tambah Kategori</button>
-
-            <table>
-                <tr>
-                    <th>Nama</th>
-                    <th>Aksi</th>
-                </tr>
-                <tr>
-                    <td>Coklat</td>
-                    <td class="action">
-                        <a href="#">Edit</a>
-                        <a href="#">Hapus</a>
-                    </td>
-                </tr>
-            </table>
+    <div class="produk-list">
+        <div class="card">
+            <img src="image/brownis.png">
+            <h3>Brownies Coklat</h3>
+            <span>Rp25.000</span>
         </div>
 
+        <div class="card">
+            <img src="image/brownis.png">
+            <h3>Brownies Keju</h3>
+            <span>Rp28.000</span>
+        </div>
+
+        <div class="card">
+            <img src="image/brownis.png">
+            <h3>Brownies Matcha</h3>
+            <span>Rp30.000</span>
+        </div>
     </div>
-</div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="contact" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Silakan hubungi kami melalui kontak di bawah ini</p>
+
+    <div class="contact-icons">
+        <a href="https://wa.me/628123456789">📱 WhatsApp</a>
+        <a href="https://instagram.com/brownieskukus">📸 Instagram</a>
+        <a href="mailto:brownies@gmail.com">✉️ Email</a>
+    </div>
+</section>
 
 </body>
 </html>
